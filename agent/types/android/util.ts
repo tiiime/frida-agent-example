@@ -1,0 +1,1 @@
+export let Log = Java.use("android.util.Log")
