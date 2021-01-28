@@ -1,5 +1,7 @@
-import { hookBundleGet } from "./utils/frida_android_utils"
+import { Activity, ActivityThread } from "./types/android/app"
+import { getApplicationContext } from "./utils/frida_android_utils"
 
 Java.perform(function () {
-    hookBundleGet()
+    let context = getApplicationContext()
+    console.log(context)
 })

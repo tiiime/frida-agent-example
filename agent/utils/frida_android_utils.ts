@@ -1,4 +1,4 @@
-import { Activity } from "../types/android/app";
+import { Activity, ActivityThread } from "../types/android/app";
 import { Bundle } from "../types/android/os";
 import { Log } from "../types/android/util";
 import { Exception } from "../types/java/lang";
@@ -20,4 +20,8 @@ export function hookBundleGet() {
         console.log(`${key}: ${res}`)
         return res
     }
+}
+
+export function getApplicationContext(){
+    return ActivityThread.currentApplication().getApplicationContext()
 }
